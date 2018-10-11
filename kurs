@@ -36,6 +36,7 @@ print(w) #zostanie wyswietlony komunikat o błedzie
 a="dowolny tekst "
 '''Dane tekstowe umieszczamy miedzy "tekst" lub 'tekst'
 znaki specyjalne:
+\' apostrof
 \t tabulator
 \n nowa linia
 '''
