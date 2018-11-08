@@ -28,13 +28,12 @@ zmiana.close()#zamykamy plik
 #ponowne wyświetlenie zawartości plik1.txt
 f=open("plik1.txt", "r")
 #otwieramy plik1.txt z parametrem „r” – Odczyt danych z pliku tekstowego.
-
-print(f.read())#odczyt i wyświetlenie w jednej linii
-"""Rożne możliwości wyswietlanai, edycji zawartości pliku
-    read([rozmiar]) – Odczytuje całą zawartość pliku, jeśli podamy argument, odczyta tylko wskazaną przez niego ilość znaków.
-    readline([rozmiar]) – Odczytuje jedną linię z pliku, jeśli podany argument, odczyta tylko wskazaną liczbę znaków z bieżącej linii.
-    readlines() – Odczytuje wszystkie linie z pliku i zwraca jako listę.
-    write("dane") – Zapisuje „dane” do pliku.
-    writelines(dane) – Zapisuje listę „dane” do pliku.
+print(f.read())#Zapis w jednej linii funkcja print z metodą read() Wyświetla zawartość całego pliku 
+"""Rożne możliwości wyswietlanai, edycji zawartości pliku METODY
+    .read(7) – Odczytuje całą zawartość pliku(), jeśli podamy argument, odczyta 7 pierwszych znaków.
+    .readline(6) – Odczytuje jedną linię z pliku, jeśli podany argument, odczyta 6 znaków z bieżącej linii.
+    .readlines() – Odczytuje wszystkie linie z pliku i zwraca jako listę.
+    .write("dane") – Zapisuje „dane” do pliku.
+    .writelines(dane) – Zapisuje listę „dane” do pliku.
 """
 f.close()#zamknięcie pliku
