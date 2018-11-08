@@ -34,7 +34,7 @@ print(f.read())#odczyt i wyświetlenie w jednej linii
     read([rozmiar]) – Odczytuje całą zawartość pliku, jeśli podamy argument, odczyta tylko wskazaną przez niego ilość znaków.
     readline([rozmiar]) – Odczytuje jedną linię z pliku, jeśli podany argument, odczyta tylko wskazaną liczbę znaków z bieżącej linii.
     readlines() – Odczytuje wszystkie linie z pliku i zwraca jako listę.
-    write(dane) – Zapisuje „dane” do pliku.
+    write("dane") – Zapisuje „dane” do pliku.
     writelines(dane) – Zapisuje listę „dane” do pliku.
 """
 f.close()#zamknięcie pliku
