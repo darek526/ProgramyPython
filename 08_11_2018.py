@@ -1,15 +1,28 @@
 """
 Operacje na plikach
 """
-plik2=open("plik2.txt", "w") #otwier plik gdy nie istnieje tworzy taki plik
-plik2.write("pierwasza linia tekstu\n")#dodanie pierwszej linii tekstu
-plik2.write("druga linia tekstu\n")
-plik2.write("trzecia linia tekstu\n")
-plik2.write("czwarta linia tekstu\n")
-plik2.write("piąta linia tekstu\n")
-plik2.write("6 linia tekstu\n")
-plik2.close()#zamknięcie pliku
-plik2=open("plik2.txt","r")
-zawartosc= plik2.read() # podstawienie  pliku do zmiennej zawartosc i odczyt
+#tworzenie nowego pliku
+zapis=open("plik3.txt", "w") #otwiera plik gdy nie istnieje tworzy plik3.txt
+zapis.write("pierwasza linia tekstu\n")#dodanie pierwszej linii tekstu i kolejnych
+zapis.write("druga linia tekstu\n")
+zapis.write("trzecia linia tekstu\n")
+zapis.write("czwarta linia tekstu\n")
+zapis.write("piąta linia tekstu\n")
+zapis.write("6 linia tekstu\n")
+zapis.close()#zamknięcie pliku obowiązkowo
+
+#otwieranie i wyświetlenie pliku
+zapis=open("plik3.txt", "r") #otwieramy plik3.txt
+zawartosc= zapis.read() # podstawienie  pliku zapis do zmiennej zawartosc i odczyt
 print (zawartosc)#wydruk na ekran zawartosci pliku
-plik2.close()#zamknięcie pliku
+zapis.close()#zamknięcie pliku obowiązkowo
+
+#dodawanie danych do pliku
+zmiana=open("plik1.txt", "a")#otwieramy plik1.txt
+zmiana.write("dodajemy cyfry: \n 1233 \n67879")#dodajemy linie np:z cyframi
+zmiana.close()#zamykamy plik
+
+#ponowne wyświetlenie zawartości plik1.txt
+f=open("plik1.txt", "r")
+print(f.read())
+f.close()
