@@ -23,6 +23,6 @@ zmiana.write("dodajemy cyfry: \n 1233 \n67879")#dodajemy linie np:z cyframi
 zmiana.close()#zamykamy plik
 
 #ponowne wyświetlenie zawartości plik1.txt
-f=open("plik1.txt", "r")
-print(f.read())
-f.close()
+f=open("plik1.txt", "r")#otwieramy plik1.txt
+print(f.read())#odczyt i wyświetlenie w jednej linii
+f.close()#zamknięcie pliku
