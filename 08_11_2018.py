@@ -1,5 +1,8 @@
 """
 Operacje na plikach
+http://ifcode.pl/python-operacje-na-plikach/
+https://rk.edu.pl/pl/operowanie-na-plikach-w-pythonie/
+https://www.youtube.com/watch?v=Gkqt3I0xf1c
 """
 #tworzenie nowego pliku
 zapis=open("plik3.txt", "w") #otwiera plik gdy nie istnieje tworzy plik3.txt
