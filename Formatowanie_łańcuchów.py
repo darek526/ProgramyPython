@@ -1,3 +1,6 @@
+"""
+formatownie łańcuchów
+"""
 #stary sposób formatowania pathon 2 i 3
 napis="Ta liczba %f to %s" %(3.14, "liczba pi")
 #wynik Ta liczba 3.140000 to liczba pi
