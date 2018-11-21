@@ -1,0 +1,33 @@
+Tabela 3.1. Operatory porównania
+Operator        Znaczenie         Przykładowy warunek        Przyjmuje wartość
+==            równa się               5 == 5                      True
+!=            nie równa się           8 != 5                      True
+>             większe niż             3 > 10                      False
+<             mniejsze niż            5 < 8                       True
+>=            większe lub równe       5 >= 10                     False
+<=            mniejsze lub równe      5 <= 5                      True
+
+Tabela 3.2. Podsumowanie instrukcji służących do rozgałęziania kodu
+Instrukcja                                                    Opis
+if <warunek>:                                        Instrukcja if . Jeśli <warunek> jest spełniony, <blok kodu> jest
+  <blok kodu>                                                  wykonywany; w przeciwnym wypadku jest pomijany.
+
+if <warunek>:                                 Instrukcja if z klauzulą else . Jeśli <warunek> jest spełniony,
+  <blok kodu 1>                                 wykonywany jest <blok kodu 1> ;
+else:                                         w przeciwnym wypadku
+  <blok kodu 2>                                               wykonywany jest <blok kodu 2> .
+
+
+
+if <warunek 1>:                           Instrukcja if z klauzulami elif i opcjonalną klauzulą else .
+  <blok kodu 1>                            Wykonywany jest blok pierwszego spełnionego warunku.
+elif <warunek 2>:                                         
+  <blok kodu 2>                                
+.
+.
+.
+elif <warunek N>:
+  <blok kodu N>
+else:                                             Jeśli żaden warunek nie jest spełniony, wykonywany jest blok
+  <blok kodu N+1>                                       opcjonalnej klauzuli else .
+
