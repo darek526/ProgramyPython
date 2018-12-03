@@ -1,0 +1,26 @@
+"""
+obliczanie silni z liczby naturalnej
+factorial(n)
+n!=1*2*3*...(n-1)*n
+(n-1)
+"""
+def factorial(n):
+    if type(n) !=int:#sprawdzenie czy podana wartosc to liczba naturalna typ int
+        print("Zly argument funkcji n powinn byc wieksze od zera liczba typu int")
+    if n>1:
+        return factorial(n-1)*n
+    else:
+        return 1
+    print(factorial(5))
+"""
+silnia z uzuciem pętli for
+"""
+
+def factorial(n):
+    if type(n) !=int:#sprawdzenie czy podana wartosc to liczba naturalna typ int
+        return ("bledny typ zmiennej")
+    z=1
+    for i in range(1,n+1):
+        z=z*i
+    return z
+    print(z)
