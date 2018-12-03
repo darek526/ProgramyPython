@@ -6,3 +6,5 @@ instalacja najnowszej wersji
   https://www.youtube.com/watch?v=ocCKL4VOex8 
 # PyCarm
   https://www.youtube.com/watch?v=TIs4-NfPiYY
+# Wszystkie funkcje metody
+  https://www.w3schools.com/python/python_ref_functions.asp
