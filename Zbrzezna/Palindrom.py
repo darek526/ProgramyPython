@@ -7,7 +7,7 @@ def main():
 def palindrom(s):#s przekazuje wpisany napis
     """Tworzy lustzrane odbicie napisu s"""
     t=""#definiujemy nowy łańcuch znaków zaczynamy od pustego napisu
-    for c in s:#przechodz pokoleji łncuch s
+    for c in s:#przechodz pokoleji łancuch s
         t=c + t#
 
     if s==t:
