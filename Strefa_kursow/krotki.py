@@ -1,6 +1,5 @@
 """
 Bardzo podobna do listy ale bez mozliwości edycji
-
 """
 krotka = (1,2,35,"kot", False, "duży kot")
 
@@ -89,4 +88,3 @@ print(listka)
 listka.sort()
 print(listka)
 #[-44, 0.33, 2, 2.3, 66, 342]
-

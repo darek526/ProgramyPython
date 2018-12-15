@@ -7,7 +7,7 @@ a = 1
 b = 2
 c = 4
 print(a, b, c)
-'''1 2 4 można było napisaź  też w 3 poleceniach print(a) print(b) print(c)
+'''1 2 4 można było napisaź  też w 3 poleceniach print(a) print(b) print(c) 
  wtedy wyświetla:
  1
  2
@@ -40,13 +40,13 @@ a + b dodawanie
 a - b odejmowanie
 a * b mnożenie
 a / b dzielenie wynik zawsze to float 4/2=2.0 19/4=4.75
-a // b dzielenie  gdzie wynik to wymuszony integer(integer division)
+a // b dzielenie  gdzie wynik to wymuszony integer(integer division) 
     odrzuca to co jest po przecinku4//2=2 ale 10//3=3 19//4=4
 a % b reszta z dzielenia np 10 $ 5 = 0 bo dzieli się bez reszty
 10 % 3 = 1 bo  3*3=9 i zostaje 1 reszty
 moąna sprawdzać parzystość liczby jeśli a % b = 0 jest to liczba przysta
 a **b potęgowanie a do potegi b
-jesli mamy 2 liczby int i float wynik zawsze float
+jesli mamy 2 liczby int i float wynik zawsze float 
 kolejność operacji jak w innch potegowanie mnożenie dodawanie aby zmienić używamy nawiasów
 """
 """
@@ -55,4 +55,5 @@ a += 1  <=>  a = a + 1
 Dekrementacj zmniejszenie wartości o 1 czyli -1
 a -= 1 <=> a = a - 1
 a *= 2 <=> a = a * 2
+
 """
