@@ -51,7 +51,6 @@ for i in range(1, 4, 2):# trzy liczby pierwsz początek zakresu druga -1 koniec
 for i in range(10):#zakres od 0 do 10-1
     print("*" * i)#mnozymy string przez kolejne wartości i
 """
-
 *
 **
 ***

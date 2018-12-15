@@ -1,10 +1,8 @@
 """
 while warunek:
     blok operacji
-
 uwaga przy kostrułowaniu warunku należy uważać aby nie zapetlić
 stworzyć warunku który zawsze będzie prawdziwy pętla nieskończona
-
 while True:
     print("Pętla działa bez konca warunek True zawsze prawdziwy")
 """

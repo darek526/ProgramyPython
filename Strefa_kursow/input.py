@@ -4,14 +4,14 @@ imie = input("Jak masz na imie? \n")
 print("Witaj " + imie)#jesli imię mialoby inny typ niz string wystąpi błąd
 # należałoby dokonać konwersji na string str(imie)
 """
-Jak masz na imie? 
+Jak masz na imie?
 Darek
 Witaj Darek
 """
 nazwisko = input("Podaj swoje nazwisko: \n")
 print("Nazywasz sie ", nazwisko)#taki zapis umożliwia łączenie róznych typów zmiennych
 """
-Formatowanie konwersaj różnych typów 
+Formatowanie konwersaj różnych typów
 zmiennych
 """
 x = int(input("Podaj warość x: \n"))#Konwersja pobranej wartości do integer liczba całkowita

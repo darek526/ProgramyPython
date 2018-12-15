@@ -5,7 +5,6 @@
 <=  mniejszy lub równy
 ==  rówwny
 !=  rózny (nie równy)
-
 """
 a=0
 
