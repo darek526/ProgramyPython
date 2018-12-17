@@ -36,4 +36,5 @@ else:
         for j in range(n):
             macierz_c[i][j]=0
             for k in range(n):
-                c[i][j]=c[i,j] + a[i][k] * b[k][i]
+                macierz_c[i][j]+= macierz_a[i][k] * macierz_b[k][i]#ostani nawias[j]
+print(macierz_c)
