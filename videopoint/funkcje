@@ -1,0 +1,14 @@
+"""
+Funkcje
+"""
+def wykonaj(a,b):
+    print(a,b)
+    #3 2 wpisanie tej lini poza funkćą wykonaj błąd
+    return a*b
+print(wykonaj(2,3))#6
+#inny zapis
+#wynik=wykonaj(3,2)#wywołanie funkcji wykonaj
+#print(wynik)#6
+"""
+Funkcje złożone(zagnieżdżone)
+"""
