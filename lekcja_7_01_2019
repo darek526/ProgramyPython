@@ -4,7 +4,7 @@ a
 
 """
 """
-# nie używamy break przegladamy wszystkie lelmenty zbioru
+# nie używamy break przegladamy wszystkie lelmenty zbiotu
 n=int(input("Wprowadż liczbę elementów pierścienia n= "))
 a=int(input("Wprowadż element odracany a="))
 c=0
@@ -16,6 +16,7 @@ for i in range(1,n):
         print("Nie istnieje element odrotny do a")
         print("NWD (a,b) nie jest równy 1 \n")
 """
+
 """
 # z uzyciem break
 n=int(input("Wprowadż liczbę elementów pierścienia n= "))
