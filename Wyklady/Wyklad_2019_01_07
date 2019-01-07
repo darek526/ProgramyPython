@@ -70,3 +70,25 @@ a=int(input("Wprowadz a, a="))
 print("element odwrotny do a=", a)
 print("jest rowny =", element_odwrotny(a,n))
 """
+""" porównanie 2 łańcuchów sortowanie 
+"""
+n=int(input("Wprowadż długość listy"))
+a=[]
+a.append(input("Podaj element listy"))
+a.append(input("Podaj  kolejny element listy"))
+x=False
+while (x==False):
+    x=input("Czy chcesz zatwierdzić", y-Yes, N-No)
+    if x==y:
+        x=True
+    else:
+        x=False
+        a.append(input("Podaj kolejny elemen listy"))
+z=len(x)
+    for j in range [z-1]:
+        for i in range[z-1]:
+            if [i]>a[i+a]:
+                temp = a[i+1]
+                a[i+1]=a[i]
+                a[:]=temp
+    print("lista po uporządkowaniu:",a)
