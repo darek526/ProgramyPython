@@ -1,1 +1,47 @@
-
+"""
+"""
+wartość bezwzględna liczby zmienoprzecinkowej funkcja 
+"""
+def wartosc_bezwzgled(a):
+    if a>=0:
+        return a
+    else:
+        return -a
+a=float(input("Wpisz dowolna liczbę ziennoprzecinkową"))
+print("wartość bezwzględna liczby {} wynosi " .format(a),  wartosc_bezwzgled(a))
+"""
+"""
+# funkcja podając  znak 1(liczby dodatni) -1(liczby ujemne) 0(0)
+def main():
+    x=int(input("Wpisz dowoolna liczbę program poda znak argumentu"))
+    print("Znak liczby  {} to \n".format(x), sgn(x))
+def sgn(x):
+    if x==0:
+        return 0
+    elif x > 0:
+        return 1
+    else:
+        return -1
+main()
+"""
+"""
+#dzielenie dwóch liczb (wyjątek dzielenie przez 0
+def dzielenie(a,b):
+    if b==0:
+        print("Błąd, nie można dzielić przez 0")
+    else:
+        return a/b
+a=float(input("Wpisz wartośc liczby a\n"))
+b=float(input("Wpisz wartość liczby b\n"))
+print("Wynik dzielenia {} przez {} wynosi ".format(a,b),dzielenie(a,b))
+"""
+#rozwiązanie równania liniowego typu ax + b = 0
+def rown_liniowe(a,b):
+    assert !=0:
+    return -a/b
+    else:
+    print("Jeśli a = 0 takie równanie liniowe nie ma rozwiązania")
+print("Rozwiązujemy równanie liniowe typu ax + b = 0")
+a = float(input("Wpisz wartośc liczby a\n"))
+b = float(input("Wpisz wartość liczby b\n"))
+print("W  równania {}x + {}=0 \n x=".format(a,b),rown_liniowe(a,b))
