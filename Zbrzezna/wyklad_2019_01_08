@@ -7,7 +7,7 @@ def wartosc_bezwzgled(a):
         return a
     else:
         return -a
-a=float(input("Wpisz dowolna liczbę ziennoprzecinkową"))
+a=float(input("Wpisz dowolna liczbę zmiennoprzecinkową"))
 print("wartość bezwzględna liczby {} wynosi " .format(a),  wartosc_bezwzgled(a))
 """
 """
