@@ -1,1 +1,37 @@
 
+'''
+oBLICZENIE PIERWIASTKA RÓWNANIE KWADRATOWEGO
+'''
+"""
+import math
+def main():
+    a=float(input("Podaj wartość a:\n"))
+    b=float(input("Podaj wartość b:\n"))
+    c=float(input("Podaj wartość c:\n"))
+    print("Rozwiązniem równania {}x^2 + {}x + {} = 0 jest:\n ".format(a,b,c),oblicz_pierwiastki(a,b,c))
+    #wypisz_pierwiastki(a,b,c) # wywołanie funkcje wypisz_pierwiastki wtedy komentujemy linię powyżej
+def oblicz_pierwiastki(a,b,c):
+    assert a != 0
+    delta = b * b - 4 * a * c
+    if delta > 0:
+        x1 = (-b - math.sqrt(delta)) / (2 * a)
+        x2 = (-b + math.sqrt(delta)) / (2 * a)
+        return x1,x2
+    elif delta == 0:
+        x = -b / (2 * a)
+        return x
+    else:
+        return "Równanie nie ma pierwiastków"
+def wypisz_pierwiastki(a, b, c):
+    assert a != 0
+    delta = b * b - 4 * a * c
+    if delta > 0:
+        print("Równanie ma dwa pierwiastki")
+        print("x1 =", (-b - math.sqrt(delta)) / (2 * a))
+        print("x2 =", (-b + math.sqrt(delta)) / (2 * a))
+    elif delta == 0:
+        print("Równanie ma podwójny pierwiastek")
+        print("x1 = x2 = ", -b / (2 * a))
+    else:
+        print("Równanie nie ma pierwiastków")
+main()"""
