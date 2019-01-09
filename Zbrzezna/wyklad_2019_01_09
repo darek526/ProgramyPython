@@ -35,3 +35,4 @@ def wypisz_pierwiastki(a, b, c):
     else:
         print("Równanie nie ma pierwiastków")
 main()"""
+
