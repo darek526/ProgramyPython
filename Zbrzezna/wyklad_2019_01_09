@@ -74,4 +74,15 @@ for i in range(1, n+1):
 print("W podanych liczbach mamy",str(s),"liczb nieparzystych")
 """
 
-
+"""
+#prosi o padnie ile liczb chcemy wpisać
+# liczy ile podanych przez użytkownika to liczby
+# podzielne przez 3 i niepodzielne przez 5
+n=int(input("Ile liczb chcesz podać n:\n"))
+s=0
+for i in range(1, n+1):
+    liczba=int(input("podaj liczbę"))
+    if liczba %3 ==0 and liczba %5!=0:#sprawdzemie czy liczba jest podzielna prze 3 i nie podzielne przez 5
+            s=s+1
+print("W podanych liczbach mamy {} liczb podzielnych prze 3 i nie podzielnych przez 5".format(s))
+"""
