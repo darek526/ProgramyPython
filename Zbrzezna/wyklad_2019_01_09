@@ -1,6 +1,6 @@
 
 '''
-oBLICZENIE PIERWIASTKA RÓWNANIE KWADRATOWEGO
+OBLICZENIE PIERWIASTKA RÓWNANIE KWADRATOWEGO
 '''
 """
 import math
@@ -35,4 +35,43 @@ def wypisz_pierwiastki(a, b, c):
     else:
         print("Równanie nie ma pierwiastków")
 main()"""
+
+
+"""
+Iteracyjne wpisywanie danych pętla for
+"""
+"""
+#liczy sume od 1 do liczby podanej przez uztkownika
+n=int(input("Podaj wartość n:\n"))
+s=0
+for j in range(1,n+1):
+    s=s+j
+print("Suma liczb od 1 do {} wynosi {}".format(n,s))
+"""
+"""
+# po podaniu zakresu liczy ile jest liczb nieparzystych
+
+n=int(input("Podaj wartość n:\n"))
+lista=[]
+for i in range(1,n+1,2):
+    print(i)
+    lista.append(i)
+#print(len(lista))
+a=len(lista)
+print("w przedziale od 1 do {} jest {} liczb nieparzystych".format(n,a))
+"""
+"""
+#prosi o padnie ile liczb chcemy wpisać
+# liczy ile podanych przez użytkownika to liczby nieparzyste
+n=int(input("Ile liczb chcesz podać n:\n"))
+s=0
+for i in range(1, n+1):
+    liczba=int(input("podaj liczbę"))
+    if liczba %2 !=0:#sprawdzemie czy liczba jest nieparzysta
+            s=s+1
+#print("W podanych liczbach mamy {} liczb nieparzystych".format(s)) inny zapis poniżej
+#print("W podanych liczbach mamy"+" " +str(s) +" " +"liczb nieparzystych")
+print("W podanych liczbach mamy",str(s),"liczb nieparzystych")
+"""
+
 
