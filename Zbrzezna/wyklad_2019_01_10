@@ -27,3 +27,36 @@ def ciag3nplus1(n):
 if __name__ == "__main__":
     main()
 """
+"""
+#Wczytaj n nastepnie podnosimy 2 do potęgi n
+def main():
+    n=int(input("Podaj liczbę naturalną n: "))
+    if n==0:
+        print("2 do potęgi 0 wynosi 1")
+    else:
+        s=2
+        j=1
+        while j<n:
+            s=s*2
+            j+=1#inny zapis j+=1
+        print("2 do potegi {} wynosi {}".format(n, s))
+
+main()
+"""
+"""
+Wczytaj n i oblicza n!
+def main():
+    n=int(input("Podaj liczbę naturalną n: "))
+    if n==0:
+        print("0!=1")
+    elif n==1:
+        print("1!=1")
+    else:
+        s=2
+        j=1
+        while j<n:
+            s=s*s
+            j+=1
+        print("{}!={}".format(n,s))
+main()
+"""
