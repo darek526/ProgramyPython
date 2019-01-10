@@ -1,1 +1,29 @@
 
+"""Oblicza sum˛e liczb naturalnych od 1 do n"""
+"""#!/usr/bin/env python3
+def main():
+    n = int(input("Podaj liczb˛e naturaln ˛ a: "))
+    s = 0
+    j = 1
+    while j <= n:
+        s = s + j
+        j = j + 1
+    print("Suma liczb od 1 do {}, wynosi {}".format(n,s))
+main()
+"""
+"""
+#Ciag Collatza
+def main():
+    n = int(input("Podaj liczbe naturaln˛ n: "))
+    ciag3nplus1(n)
+def ciag3nplus1(n):
+    while n > 1:
+        print(n, end = ", ")
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = 3 * n + 1
+    print(n, end = ".\n")
+if __name__ == "__main__":
+    main()
+"""
