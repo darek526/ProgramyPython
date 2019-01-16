@@ -72,3 +72,41 @@ def moja_funkcja():
     print(x,y)
 moja_funkcja()#2 3
 print(x) #1wywołanie tylko zmiennej globalnej
+def moja_2_funkcja():
+    global x#wywołanie zmiennej lobalnej zmiana x
+    # wewnątrz tej funkcji zmini wartość x dla całego programu
+    x+=1
+    y=5
+    print(x,y)
+moja_2_funkcja()
+print(x)# x=2
+"""
+2 5
+2
+"""
+"""
+Generatory funkcji, ułatwiają tworzenie iteratoróœ"""
+
+def generator(a):
+    for i in range(a):
+        yield i+2
+        #w generatorach zamiast return uzywamy instrukcji yield
+"""for i in generator(4):
+    print(i, end=", ")#2, 3, 4; 5,
+    #standartowo funkcja print kończy się nową linią, można to zmienić funkcją end=""
+    # end= anuluje nową linie a wartość w ""będzie użyte na końcu linii np ,.: spacja itd
+#przypisanie generatora do zmiennej i użyć tej zmiennej jako argument funkcji next"""
+# do sprawdzenia wartości utworzonej przez nasz generator
+gen=generator(5)
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+print(next(gen))
+"""
+2
+3
+4
+5
+6
+"""
