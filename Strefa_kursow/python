@@ -1,0 +1,698 @@
+'''najpierw nazwa zmiennej identyfikatora po znaku =jej wartość nigdy odwrotnie
+przy nazwach najpierw litera później cyfry. Nie używamy spacji słowa łączymy _
+slowoDrugie tzw camel
+nie uzywamy słów kluczowych break cllass ok 20
+'''
+a = 1
+b = 2
+c = 4
+print(a, b, c)
+'''1 2 4 można było napisaź  też w 3 poleceniach print(a) print(b) print(c) 
+ wtedy wyświetla:
+ 1
+ 2
+ 4
+ '''
+a = 1
+b = 2
+c = a + b
+print(a, b, c)
+# 1 2 3
+print(a)
+print(b)
+print(c)
+'''
+typy zmiennych
+'''
+a = 2
+b = 4.5
+print(a)# 2
+print(b)# 4.5
+# funkcj type podaje typ (rodzaj) zmiennej<
+print(type(a)) # class 'int'>
+print(type(b))# <class 'float'>
+# funkcja isinstance sprawdza czy zmienna ma podany typ wynik True lub False
+print(isinstance(a, int)) #True
+print(isinstance(b, int)) # False
+"""
+operacje matematyczne
+a + b dodawanie
+a - b odejmowanie
+a * b mnożenie
+a / b dzielenie wynik zawsze to float 4/2=2.0 19/4=4.75
+a // b dzielenie  gdzie wynik to wymuszony integer(integer division) 
+    odrzuca to co jest po przecinku4//2=2 ale 10//3=3 19//4=4
+a % b reszta z dzielenia np 10 $ 5 = 0 bo dzieli się bez reszty
+10 % 3 = 1 bo  3*3=9 i zostaje 1 reszty
+moąna sprawdzać parzystość liczby jeśli a % b = 0 jest to liczba przysta
+a **b potęgowanie a do potegi b
+jesli mamy 2 liczby int i float wynik zawsze float 
+kolejność operacji jak w innch potegowanie mnożenie dodawanie aby zmienić używamy nawiasów
+"""
+"""
+Inkrementacja zwiekszenie wartośći zmiennej o 1 czyli +1
+a += 1  <=>  a = a + 1
+Dekrementacj zmniejszenie wartości o 1 czyli -1
+a -= 1 <=> a = a - 1
+a *= 2 <=> a = a * 2
+"""
+"""
+my_tekst = " tekst"
+my_tekst = 'tekst'
+indeks to pozycja w ciągu znkowym zaczynamy liczyć od zera to pierwsza pozycja od lewej
+"""
+prefix = "Kurs"
+nazwa = "Python"
+print(prefix + nazwa)# KursPython
+print(prefix + " " + nazwa) # Kurs Python(konkatenacja dwóch stringów
+print(len(nazwa))# 6 (ilość elementów stringu)
+print(nazwa[0])# P (zerowy indeks litera P)
+slowo = "dzien dobry"
+print(len(slowo))# 11 liczy również spacje
+print(slowo.capitalize())# Dzien dobry (zamienia pierwszą litere pozycja 0 na dużą
+print(slowo.title())# Dzien Dobry (zamienia w każdym słowie piewszą literę na dużą
+name = "konkatenacja stringu"
+print(name[0])#k(zerowa pozycjia to litera k pierwszy element bo liczymy od 0)
+print(name[-1])#u(ostatni element)
+print(name[0:4])#konk(wyświetla od 0 pozycji do 4 -1 można pominąć zero[:4])
+print(name[3:6])# kat(od 3 pozycji do 6-1)
+print(name[15:])#ringu( od nr 15 do końca)
+print(name[15:-1])#ring(od 15 elementu do końca ale bez ostatniego
+
+a = "abc"
+print(a * 3)#abcabcabc
+print(3 * a + " " + "koiec")#abcabcabc koniec
+
+#metody sprawdzania string
+#.islower(czy pierwsza litera jest mała)
+slowo = "Dzien dobry"
+print(slowo.islower())#False
+print(slowo.isalnum())#False(czy są tylko litery lub cyfry nie bo jest spacja)
+print(slowo.isalpha())#False(czy są tylko litery nie bo jest spacja)
+print(slowo.find("D"))#0(info że znalazł literę D jest na 0(pierwszej pozycji)
+print(slowo.find("c"))#-1(info że w tym ciągu znaków litera c nie występuj
+
+print("z" in slowo)#True(info ze występuje jeśli nie to False)
+print("z" not in slowo)#False(info ze lit z nie wystepuje )
+#input funkcja umożliwia wpisywanie danych np do zmiennej
+#input domyślnie zapisuje pobrane dane jako string
+imie = input("Jak masz na imie? \n")
+print("Witaj " + imie)#jesli imię mialoby inny typ niz string wystąpi błąd
+# należałoby dokonać konwersji na string str(imie)
+"""
+Jak masz na imie? 
+Darek
+Witaj Darek
+"""
+nazwisko = input("Podaj swoje nazwisko: \n")
+print("Nazywasz sie ", nazwisko)#taki zapis umożliwia łączenie róznych typów zmiennych
+"""
+Formatowanie konwersaj różnych typów 
+zmiennych
+"""
+x = int(input("Podaj warość x: \n"))#Konwersja pobranej wartości do integer liczba całkowita
+#x = float(input("podaj wartość x:\n")) konwersja pobranej wartości do float liczba zmienno przecinkowa
+#\n znak nowej linii program sam przejdzie do nowej linii
+x += 2#<=> x = x + 2(zwiększmy wartość z o 2)
+print(x)#14
+#print("wartość x wynosi: " + x)x jest int liczbą całkowitą "wartośc x wynosi" to ciąg znakóo string
+#nie można ich połączyć razem wystąpi błąd należy dokonać konwersji int na string
+#str(wartość)
+print("wartość x wynosi: " + str(x))
+#print("Wartość x wynosi: ", x) #taki zapis umożliwia łączenie róznych typów zmiennych
+print("wartość x wynosi {}".format(x))# za pomocą metody .format dokonujemy
+# konwersji wartości x i ta wrtość zostanie wpisan między {}
+"""
+ilosc = 12
+cena = 35
+print("Mamy {} sztuk zabawek jedna kosztuje {} zł".format(ilosc, cena))
+#Mamy 12 sztuk zabawek jedna kosztuje 35 zł
+"""
+"""
+listy to zbiory różnych zmiennych którym przyporządkowane są ich pozycje
+numerowanie pozycji zaczynamy od 0
+"""
+moja_lista = [1, 2.2, True, None, "x", "Ala ma kota"]
+#wyświetlenie całej listy:
+print(moja_lista)
+# [1, 2.2, True, None, 'x', 'Ala ma kota']
+#Iteracja po elementach: wyswietlenie poszczególnych elementó listy
+for i in  moja_lista:#wybiera element z listy
+    print(i)# wyswietla ten element i wraca do kolejnego elementy
+"""
+1
+2.2
+True
+None
+x
+Ala ma kota
+"""
+#zamiana istniejącego elementu na inny
+# (stary kasuje na jego miejsce nadpisuje nowy
+#wpisanie []indeksu większego niż posiada lista jest błędem
+moja_lista[3] = "wtorek"
+print(moja_lista)
+#[1, 2.2, True, 'wtorek', 'x', 'Ala ma kota']
+
+#METODY
+#dodanie jednego nowegu elementu na koniec listy
+moja_lista.append("sobota")
+print(moja_lista)
+#[1, 2.2, True, 'wtorek', 'x', 'Ala ma kota', 'sobota']
+#odwrócenie kolejności listy
+moja_lista.reverse()
+print(moja_lista)
+#['sobota', 'Ala ma kota', 'x', 'wtorek', True, 2.2, 1]
+#sortowanie od wartości najmniejszej do największej
+# sortuje tylko liczby
+moja_lista2 = [32.4,21.6,4,77,33,9,5]
+print(moja_lista2)
+moja_lista2.sort()
+print(moja_lista2)
+"""
+[32.4, 21.6, 4, 77, 33, 9, 5]
+[4, 5, 9, 21.6, 32.4, 33, 77]
+"""
+#elementy listy
+print(moja_lista)#cała lista
+print(moja_lista[:2])#elementy o indeksie 0 i 1
+print(moja_lista[3:])#od indeksu 3(liczy od 0) do kończ listy
+"""
+['sobota', 'Ala ma kota', 'x', 'wtorek', True, 2.2, 1]
+['sobota', 'Ala ma kota']
+['wtorek', True, 2.2, 1]"""
+
+#łączenie dwóch list
+moja_lista3 = moja_lista + moja_lista2
+print(moja_lista3)
+# ['sobota', 'Ala ma kota', 'x', 'wtorek', True, 2.2, 1, 4, 5, 9, 21.6, 32.4, 33, 77]
+moja_lista4 = moja_lista * 2 + moja_lista2#moja lista będzie wpisana dwa razy
+print(moja_lista4)
+#['sobota', 'Ala ma kota', 'x', 'wtorek', True, 2.2, 1, 'sobota', 'Ala ma kota', 'x', 'wtorek', True, 2.2, 1, 4, 5, 9, 21.6, 32.4, 33, 77]
+
+#zliczenie elementów listy
+print(len(moja_lista4))
+#21 tyle elmentów zawiera moja_lista4
+
+#sprawdzenie czy konkretna wartość występije na liście
+# odpowiedż: True False
+print("wtorek" in moja_lista4)# czy wartość wtorek występuja w moja_lista4
+# można użyć not in czy nie wystepuje
+# True
+print(3.14 in moja_lista4)# czy 3.14 wystepuje w liście
+#False
+"""
+Bardzo podobna do listy ale bez mozliwości edycji
+"""
+krotka = (1,2,35,"kot", False, "duży kot")
+
+#wyswietlenie krotki
+print(krotka)
+#(1, 2, 35, 'kot', False, 'duży kot')
+
+#iteracja krotki po elementach
+for i in krotka:
+    print(i)
+"""
+1
+2
+35
+kot
+False
+duży kot
+"""
+#utworzenie krotki z fragmentu innej krotki
+nowa = krotka[:4]
+print(nowa)
+#(1, 2, 35, 'kot')
+
+#sprawdzenie czy wartość występuje( lub niewystepije) w krotce
+#odpowiedź True False
+print("kot" in nowa)
+#True
+print(1 not in nowa)
+#False (pytanie było czy nie wystepuje a wystepuje)
+
+#łączenie krotek
+stara = (3.14, 2.4, "dom")
+nowa_krotka = stara + nowa * 2 #łączymy 2 krotki w jedną
+# wcześniej nowa zostaje zdublowana przez mnożenie
+print(nowa_krotka)
+# (3.14, 2.4, 'dom', 1, 2, 35, 'kot', 1, 2, 35, 'kot')
+
+#zliczenie elementów krotki
+print(len(nowa_krotka))
+# 11
+
+#Inny sposób tworzenia nowej krotki
+suma = nowa_krotka + (99,33,"las")
+print(suma)
+#(3.14, 2.4, 'dom', 1, 2, 35, 'kot', 1, 2, 35, 'kot', 99, 33, 'las')
+
+#tworzenie krotki z listy lub jej części
+lista = [2, 3.14, "noc w lesie", 99, 3]
+print(lista)
+krotka = tuple(lista[:3])#tylko 3 pierwsze elementy listy
+print(krotka)
+# [2, 3.14, 'noc w lesie', 99, 3]
+# (2, 3.14, 'noc w lesie')
+
+#zliczenie ilość elementów krotki
+print(len(krotka))
+# 3
+
+
+krotka2 = (2, -44, 2.3, 66, 342, 0.33)
+print(min(krotka2))
+# -44
+print(max(krotka2))
+# 342 (najweksza wartość krotki
+
+#sumowanie wszystkich wartości krotki
+print(sum(krotka2))
+# 368.63
+
+#przypisanie poszczególnych  wartości z krotki do zmiennych
+#ilość zmiennych musi odpowiadać ilości elementów krotki
+
+print(len(krotka2))#liczy ilość elementów krotki
+#6
+a, b, c, d, e, f = krotka2
+print(b)
+# 0.33
+print(krotka2)
+(2, -44, 2.3, 66, 342, 0.33)
+#utworzenie listy z wartości krotki
+listka = list(krotka2)
+print(listka)
+#[2, -44, 2.3, 66, 342, 0.33]
+
+#sortowanie tylko listy
+listka.sort()
+print(listka)
+#[-44, 0.33, 2, 2.3, 66, 342]
+"""
+>   większy
+>=  wiekszy lub równy
+<   mniejszy
+<=  mniejszy lub równy
+==  rówwny
+!=  rózny (nie równy)
+"""
+a=0
+
+if a == 1:
+    print("jeśli warunek po if jest spełniony wartość bedzie True zadziała ten blok")
+else:
+    print("Jeśli nie speLniony będzie warunek po if (False) zadziała blok po else")
+print("\nTen blok zadziała bez względu na spełnienie warunku if else\n koniec")
+
+#pobieramy tylko 1 znak z klawiatury
+while 1:#pętla nieskończona
+    bit=input("Podaj 0 lub 1 tylko jeden znak: ")
+    if len(bit) < 1:
+        print("Powtórz nic nie wpisałeś: ")
+        #jesli podaliśmy za mało znaków wyśietli info
+    elif len(bit) >1:
+        print("wpisałeś więcej niż 1 znak powtórz tylko 1 znak")
+        #wpisano za dużo znaków
+    else:
+        print("ok {}".format(bit))
+        print("ok " + bit)#tylko wtedy gdy bit to string
+        print("ok", bit)
+        #jeśli podamy wystarczającą ilość > 4 wyświetli info
+        break#kończy, przerywa pętle nieskończoną while
+
+
+"""
+operatory logiczne:
+and  oraz obydwa warunki muszą być spełnione
+or lub wystarczy że jeden warunek będzie spełniony
+not zaprzeczenie
+"""
+a = 2
+b = 3
+c = 4
+if a ==2 and b == 3 and c ==4:
+    print("warunek and spełniony dla a b c")
+
+a = 0
+if not a:
+    print("warunek spełniony gdy a=0 lub a=False")
+
+#True(1)"string z zawartosćią"  False,(0),"",None
+a = True #False
+print(type(a))
+#<class 'bool'>
+"""
+for wartość in zestaw_wartość:
+    blok do wykonania
+    zrób coś
+"""
+lista = [1, 2, 3, 4, 5]
+for q in lista:# a lub dowolna inna litera
+    print(q)#wypisuje kolejno wszystkie elementy listy:
+"""
+1
+2
+3
+4
+5
+"""
+# for break
+for s in lista:
+    if s >= 4:
+        #gdy s osiągnie wartość 4 pętla zostanie zatrzymana
+        break
+    print(s)
+"""
+1
+2
+3
+"""
+
+#for range
+for i in range(4):#jedna wartość zakres od 0 do liczba -1
+    print(i)
+"""
+0
+1
+2
+3
+"""
+for i in range(2,4):# dwie liczby zakres od  pierwszej do drugiej -1
+    print(i)
+"""
+2
+3
+"""
+for i in range(1, 4, 2):# trzy liczby pierwsz początek zakresu druga -1 koniec
+    # trzecia krok o jaki będziemy zwiększać nasz licznik tu +2
+    print(i)
+"""
+1
+3
+"""
+#trójkąt z gwiazdek
+for i in range(10):#zakres od 0 do 10-1
+    print("*" * i)#mnozymy string przez kolejne wartości i
+"""
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+odwrócone
+for i in range(10,1,-1)
+"""
+"""
+Tworzymy szybko liste używając pętli for
+"""
+nowa_lista = [i for i in  range(9)]
+#licznik poczatkowy = 0 fetla for po podanym liczniku
+# w zakresie do 9(oczywiscie 9 to strażnik czyli 9-1
+print(nowa_lista)
+# [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+#można ograniczyć zakres np.  od 3  do 9(straznik)
+lista = [i for i in range(3,9)]
+print(lista)
+#[3, 4, 5, 6, 7, 8]
+
+# w podanym zakresie okreslamy krok (ile dodajemy do licznika)
+lista = [i for i in range(3,9,2)]
+print(lista)
+#[3, 5, 7]
+
+#lista tylko z liczb parzystych
+list = [i for i in range(2, 9) if i % 2 == 0]
+print(list)
+#wartości spełniające kryterium  po if zostaną dodane pozostałe zostaną pominięte
+#[2, 4, 6, 8]
+
+# lub w zakresie z krokiem spełniające warunek
+lista = [i for i in range(2,9, 3) if i % 2!=0]
+print(lista)
+#[5]
+# w zakresie od 2 do 9 krok +3  tylko liczby nieparzyste
+# (reszta z dzielenia przez 2 różna od zera)
+"""
+while warunek:
+    blok operacji
+uwaga przy kostrułowaniu warunku należy uważać aby nie zapetlić
+stworzyć warunku który zawsze będzie prawdziwy pętla nieskończona
+while True:
+    print("Pętla działa bez konca warunek True zawsze prawdziwy")
+"""
+
+liczba = 0
+while liczba < 4:#sprawdza warunek czywartość zmiennej liczba jest mniejszy od 9
+    print(liczba)#wyśietla wartość zmiennej liczba
+    liczba +=1# dodajemy 1 do wartości zmiennej liczba i wracamy do warunku
+"""
+0
+1
+2
+3
+"""
+liczba = 0
+while liczba < 4:
+    liczba += 1#zamienjając kolejnoś tych 2 lini o
+    print(liczba)#w bloku otrzymamy inny wynik
+"""
+1
+2
+3
+4
+"""
+#while break
+liczba = 0
+while liczba < 4:
+    liczba += 1
+    if liczba == 3:#jeśli liczba osiagnie wartość 3
+        break # przerwij działanie petli
+                # gdy warunek przy if będzie sspełniony(True
+    print(liczba)
+"""
+1
+2
+"""
+
+#while continue
+liczba = 0
+while liczba < 4:
+    liczba += 1
+    if liczba % 2 ==0:#jeśli wynik dzielenia tej liczby przez 2 wynosi 0
+        continue #pomin wypisanie powróć na początek petli while
+        # continue działa w tych wypadkch gdy spełniony jest warunek przy if
+    print(liczba)#wypisze tylko liczby nieparzyste aby otrzymać tylko liczby
+    # parzyste przy warunku if liczba % != 0:
+    # lub if not(liczba % 2 == 0):
+"""
+1
+3
+"""
+while True:#petla nieskończona
+    numer = int(input("Podaj liczbę większą od 0:\n"))
+    if numer < 0:
+        print("Podałeś {} jest mniejsz od zera spróbuj jeszcze raz".format(numer))
+        # spełnienie warunku przy if wyświetla info
+        continue # continue powraca do  początku pętli while można pisać bez continue ale pierwszy warunek
+        # musiałby wyglądać tak if numer > 0:
+                                    #print("ok {} jest większe od zera").format(numer))
+                                    #break
+    elif numer == 0:
+        print("Podałeś {} spróbuj jeszcze raz".format(numer))
+        # spełnienie warunku przy if wyświetla info
+        continue# ontinue powraca do  początku pętli while
+    #można użyć instrukcji else ale należy pamiętać aby print i break
+    # przesunć w prawo o 1 wcięcie
+    # działa bez else bo w tym układzie odnosi się do linii gdzie
+    # definiujemy zmienną numer która będzie wpisana z klawiatury
+    print("ok {} jest większa od zera".format(numer))
+break#kończy działanie pętli nieskończonej while
+
+"""
+zbiór wartości
+nie posiada indeksu
+zawiera pary klucz-wartość
+dane z możliwością edycji
+"""
+
+slownik = {"klucz1":1, "klucz2":2}
+print(slownik)# wyświetli cały słownik
+# {'klucz1': 1, 'klucz2': 2}
+print(slownik["klucz1"])#szukanie poszczeólnych wartości po kluczu
+#1
+
+# po kluczu mozemy nadpisać nową wartość
+slownik["klucz1"] = 33
+print(slownik)
+# {'klucz1': 33, 'klucz2': 2}
+
+#dodanie nowej wartości
+slownik["klucz3"] = "nowy"
+print(slownik)
+
+#wielokrotne użycie takiego samego klucza wyświetli
+# tylko 1 ostatnią(najnowszą wartoś) pary klucz-wartość
+#dlatego kazdy klucz musi być inny
+
+#usuwanie klucza i wartości
+del slownik["klucz1"]
+print(slownik)
+# {'klucz2': 2, 'klucz3': 'nowy'}
+# użycie print(slownik["klucz1"]) wyrzuci błąd zartzyma program
+# aby sprawdzić w bezpieczny sposób czy klucz istnieje i zobaczyc jego zawartość:
+
+print(slownik.get("klucz"))
+# None (info o braku takiego klucz)
+# jeśli klucz istnieje wyswietli jego zawartość
+
+#aby dodać kilka kluczy z ich wartościami lub zmienić wartość istniejąceg:
+
+slownik.update({
+    "klucz2":"kot",
+    "klucz4":3.14,
+    "klucz5":True
+})
+print(slownik)
+# {'klucz2': 'kot', 'klucz3': 'nowy', 'klucz4': 3.14, 'klucz5': True}
+
+#wyświetlenie tylko  samych wartości za pomocą pętli for
+for klucz in slownik:#zamiast słowa klucz możemy użyc np i s lub innego znaku
+    print(slownik[klucz])#ten sam znak który jest po fo musi być w []
+"""
+kot
+nowy
+3.14
+True
+"""
+
+#możemy wyswitlić tylko same wartości w postaci listy
+print(slownik.values())
+# dict_values(['kot', 'nowy', 3.14, True])
+
+#Wyswietlenie tylko samych kluczy w formie listy:
+print(slownik.keys())
+# dict_keys(['klucz2', 'klucz3', 'klucz4', 'klucz5'])
+"""
+struktura danych kolecja unikalnych wartości
+każda wartość musi być inna
+"""
+a = set()
+print(a)
+#set() (zbiór pusty
+a = set([1,2,34,5,5,2,7])
+print(a) #jesli przy deklaracji zbioru wpiszemy kilka razy
+# takie same warości tylko raż zostanie ona wyświetlona
+# {1, 2, 34, 5, 7}
+b = set([1, 3, 5, 23, 14])
+print(a)
+print(b)
+"""
+{1, 2, 34, 5, 7}
+{1, 3, 5, 14, 23}
+"""
+#część wspólna dwóch zbiorów
+print(a.intersection(b))
+#{1,5}
+
+#połączenie dwóch zbiorów
+print(a.union(b))
+#{1, 2, 34, 3, 5, 7, 14, 23}#każda wartość tylko raz
+
+#róznica a/b(tylko w a)
+print(a.difference(b))
+# {2, 34, 7}
+
+#różnica symetryczna a b(odwrotność części wspólnej tylko w a i tylko w b)
+print(a.symmetric_difference(b))
+# {2, 3, 34, 7, 23, 14}
+"""
+-bloki kodu do wielokrotnego wykorzystania
+-zestaw deklaracji które często się powtarzają
+-kluczowe elementy języka
+-liczne funkcje wbudowane oraz możliwość definiowania własnych
+def nazw_funkcji(argumenty):
+    deklaracje
+"""
+def suma(a,b):
+    print(a + b)
+suma(3,4)#7 musimy podać dwa argumenty w nawiasie brak jednego błąd programu
+suma(23443,435)#23878
+#aby uniknąć błedu nie wpisania argument funcji
+# domyślna wartość argumentu
+# mozna zdefiniować argument lub argumenty
+def suma(a=2, b=3):
+    print(a + b)
+suma()# 5
+suma(7)# 10
+suma(4,9)# 13
+# suma(,5) taki zapis wyrzuci błąd, musimy użyć tego spsobu zapisu:
+suma(b=17)# 19
+#suma(2, c=1, b=6) jeśli mamy więcej argumentów można stosować ten sposób
+# zapisu, nie musimy pisać a=2 bo 2 będzie odczytana z pierwszej pozycji jako a
+
+def moja_funkcja(a, *krotka, **slownik):#mozna podać tylko jedną wartość zostanie dopisan do a
+    # później możemy podać dowolne wartości które zosatną wpisane w krotke
+    # poźniej możemy podać klucze z ich wartościami zostaną wpisane w słownik
+    # należy pamiętać o kolejności podawanych wartości nie można wymieszać wartości krotek i słownika
+    print(a)
+    print(krotka)
+    print(slownik)
+moja_funkcja(3.14, "wdw", 23, 11, True, klucz1=21, klucz2=22, klucz3="domek")
+"""
+3.14
+('wdw', 23, 11, True)
+{'klucz1': 21, 'klucz2': 22, 'klucz3': 'domek'}
+"""
+#można użyć pętli for do wypisanie wartości krotki i słownika:
+def moja_2_funkcja(a, *krotka, **slownik):
+    print(a)
+    for i in krotka:
+        print(i)
+    for klucz in slownik:
+        print(slownik[klucz])
+moja_2_funkcja(3.14, "wdw", 23, 11, True, klucz1=21, klucz2=22, klucz3="domek")
+"""
+3.14
+wdw
+23
+11
+True
+21
+22
+domek
+"""
+
+def dodawanie(a,b):
+    return a+b, a*b, a-b # zwróc sume, iloczyn i różnice liczb a i b
+    # wyniki zostaną podane w postacji krotki
+    # koniec programu dodawanie, napisanie czegoś poniżej nie uruchomi się
+x = dodawanie(3,4)
+print(x)#wyświetli trzy wyniki w krotce (7, 12, -1)
+print(x[2])#-1 Tylko pozycja nr 2 krotki x
+
+#zmienne globalne i lokalne
+
+x = 1#zmienna globalna
+def moja_funkcja():
+    x = 2#zmienne lokalne
+    y = 3
+    print(x,y)
+moja_funkcja()#2 3
+print(x) #1wywołanie tylko zmiennej globalnej
+
+"""
+Funkcja jednorazowa lambda
+"""
+podwajanie = lambda a: a * 2
+potegowanie = lambda a: a * a
+print(podwajanie(7))#14
+print(potegowanie(7))#49
+#16/01/2019
