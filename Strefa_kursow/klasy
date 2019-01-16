@@ -1,0 +1,16 @@
+"""
+- w Pythonie wszystko jest obiektem
+- klasa to swego rodzaju wzorzec, na podstawie którego tworzymy obiekty(str, float, int,itd)
+- OOP(Programowanie zorientowane obiektowo)
+
+class Nazwa:
+    dane oraz zachowania
+"""
+class Punkty:
+    pass#instrukcja tymczasowa aby nie pokazało błędu
+p1=Punkty()
+p2=Punkty()
+print(p1,p2)#<__main__.Punkty object at 0x7ff38a6891d0>
+# <__main__.Punkty object at 0x7fa2c7164d30>
+# objekt typu Punkt i jego adres komórki pamięci
+print(type(p1))#<class '__main__.Punkty'>
