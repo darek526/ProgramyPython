@@ -2,5 +2,6 @@ text_cyfry = []
 text=['A', 'T', 'K', 'S', 'Z']
 for i in range(5):
     text_cyfry.append(ord(text[i]) - 65)
-print(cipher_text_matrix)
+print(text_cyfry)
 #[0, 19, 10, 18, 25]
+#['A', ' ', '!', '?', '.'] =>[0, -33, -32, -2, -19]
