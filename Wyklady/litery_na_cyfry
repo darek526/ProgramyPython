@@ -5,3 +5,28 @@ for i in range(5):
 print(text_cyfry)
 #[0, 19, 10, 18, 25]
 #['A', ' ', '!', '?', '.'] =>[0, -33, -32, -2, -19]
+
+"""
+def zamiana_liter_na_cyfry():
+    text_cyfry = []
+    text=['A', ' ', '!', '?', '.']
+    for i in range(5):
+        text_cyfry.append(ord(text[i]) - 65)
+    print(text_cyfry)
+zamiana_liter_na_cyfry()
+"""
+"""
+def zamiana_liter_na_cyfry():
+    text_cyfry = []
+    text=['A', ' ', '!', '?', '.']
+    for i in range(5):
+        text_cyfry.append(ord(text[i]) - 65)
+    if (-33) in text_cyfry:
+        pass
+    elif(-32) in text_cyfry:
+        pass
+    elif(-2) in text_cyfry:
+        pass
+    print(text_cyfry)
+zamiana_liter_na_cyfry()
+"""
