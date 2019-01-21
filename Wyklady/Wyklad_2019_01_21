@@ -1,0 +1,34 @@
+"""
+Podnoszenie do potęgi n
+a**b
+pow (a, b)
+gdzie a i b to int,  float
+a do potegi b
+
+"""
+"""a do potęgi k (mod n) ; n >=2, n to liczba naturalna
+ RSA
+ NKB Naturalny Kod Binarny 
+ wykorzystujemy zależnośc a do potęgi (2 podniesionej do potęgi r)
+ liniowa złożoność obliczeniowa
+ Algorytm iterorosnący
+ Algorytm iterowanego podnoszenia do kwadratu
+"""
+#szybkie podnosenie do potegi
+def fast_raising_to_a_power(a,k,n):
+    b=1
+    while k!=0:
+        k_i=k%2
+        k=k//2
+        b=(b*(a**k_i))%n
+        a=(a*a)%n#iterowane podnoszenie do kwadratu
+    return b
+# koniec definicji funkcji fast_raising_to_a_power(a,k,n)
+#testowanie funkcji
+n= int(input("Wprowadż moduł:\n"))
+a=int(input("Wprowadż podstawę potęgi:\n"))
+k=int(input("Wprowadż wykładnik potęgi:\n"))
+print(fast_raising_to_a_power())
+"""
+Testowanie pierwszości liczby
+"""
