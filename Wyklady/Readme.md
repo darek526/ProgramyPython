@@ -8,3 +8,6 @@
    http://wmf.univ.szczecin.pl/~szkibiel/kryptografia/ekonomia/3hill.pdf
    http://aragorn.pb.bialystok.pl/~aborowska/MPK/Krypt2011_PS04.pdf
    https://pl.wikipedia.org/wiki/Szyfr_Hilla
+   
+# listy
+  https://snakify.org/pl/lessons/lists/
