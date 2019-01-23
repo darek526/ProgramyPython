@@ -19,7 +19,7 @@ zamiana_liter_na_cyfry()
 def zamiana_liter_na_cyfry():
     text_cyfry = []
     napis=(input("Wpisz tekst jawny:\n")).upper()
-    #napis= napis.upper() #można użyc tej lini wtedy nie dodajemy .upper() za input
+    #napis= napis.upper() #upper zamienia wszystko na duże litery można użyc tej lini wtedy nie dodajemy .upper() za input
     napis=" ".join(napis)#oddziela każdy znak spacja
     text=napis.split()#zamiana łańcucha znaków string na listę
     #text=['A', ' ', '.', '?', 'A']
@@ -32,6 +32,6 @@ def zamiana_liter_na_cyfry():
         pass
     elif(-2) in text_cyfry:#"?"
         pass
-    print(text_cyfry)
-zamiana_liter_na_cyfry()
+    return text_cyfry
+print(zamiana_liter_na_cyfry())
 """
