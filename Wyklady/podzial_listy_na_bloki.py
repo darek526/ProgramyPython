@@ -5,7 +5,6 @@ lista=[17, 5, 3, 5, 24, 20, 8, 21, 7, 23, 12, 7, 6, 17, 7, 5, 7, 6]
 #print(len(lista))
 #s.center(długość) – centruje napis w polu o podanej długości (uzupełniając spacjami)
 #s.rjust(długość) – wyrównuje do prawej w polu o podanej długości (uzupełniając spacjami)
-#s.rjust(długość) – wyrównuje do prawej w polu o podanej długości (uzupełniając spacjami)
 a=len(lista)#zlicza ilość elementów listy
 b=(a//4)+1#floor division (podłoga) dzielenie bez reszty zaokrągla w dół
 k=[]
