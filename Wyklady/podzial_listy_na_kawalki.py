@@ -10,7 +10,8 @@ def podziel_liste(calosc, dlugosc):
             for i in range(4 - (len(kawalek))):
                 kawalek.append(0)
     return kawalki
-for kawalek in podziel_liste(lista, 4):
+for kawalek in podziel_liste(lista, 4):#w nawiasie nazwa listy do podziału i ilość elementów
+    # w każdej nowej liście liczba musi być taka sama jak przy warunku if powyżej i pętli for
     print(kawalek)
 #https://pl.python.org/forum/index.php?action=printpage;topic=6219.0
 """
