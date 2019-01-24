@@ -121,3 +121,33 @@ def rozszerzony_alg_Euklidesa(a,b):
         return -1#nie istnieje
 print(rozszerzony_alg_Euklidesa(5,7))#3
 
+#wyjątki
+try:
+    5+"5"
+except TypeError as er:
+    print(er)#unsupported operand type(s) for +: 'int' and 'str'
+    #print("Niezgodne typy int i str") bez as er po ATyeError
+# tam gdzie wystapi błąd nie przerywa programu tylko dostajemy info o błędzi
+
+#dzielenie przez 0
+try:
+    4/0
+except ZeroDivisionError as err:
+    print(err)
+    #print("Nie dzielimy przez 0")
+else:
+    print("Dzielenie wykonano ok")
+finally:
+    print("zawsze wyświetli ten komunikat")
+#generowanie własnych wyjątków
+def wyjatek(text):
+    print(text)
+
+odpowiedz="tak"
+try:
+    if odpowiedz=="tak":
+        raise wyjatek("Zła odpowiedź")
+except:
+    print("Niestety żle")#Niestety żle
+else:
+    print("Dobra odpowiedź")
