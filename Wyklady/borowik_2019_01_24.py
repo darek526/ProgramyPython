@@ -97,3 +97,27 @@ print(b)
 5
 3
 """
+def rozszerzony_alg_Euklidesa(a,b):
+    u=1
+    w=a
+    x=0
+    z=b
+    while w:
+        if w<z:
+            q=u
+            u=x
+            x=q
+            q=w
+            w=z
+            z=q
+        q=w//z
+        u-=q*x
+        w-=q*z
+    if z==1:
+        if x<0:
+            x+=b
+        return x#istnieje rozwiązanie liczba w przedziale[0,b-1]
+    else:
+        return -1#nie istnieje
+print(rozszerzony_alg_Euklidesa(5,7))#3
+
