@@ -151,3 +151,62 @@ except:
     print("Niestety żle")#Niestety żle
 else:
     print("Dobra odpowiedź")
+    
+    
+    
+    
+    finally:
+    print("wykonuje się zawsze")
+"""
+"""
+#inne wyjątki
+def ulubione_lody(indeks):
+    lody=["czekoladoe", "waniliowe", "truskawkoe"]
+    return  lody[indeks]
+try:
+    print(ulubione_lody(-1))
+#brak wartości w nawiasie lub wartość większ od wielkości listy błąd
+except (IndexError,TypeError):#błąd brak w indeksi , bład typu ok jest tylko  int
+    print("Nie ma takich lodów")
+#otwieranie plików
+"""
+try:
+    uchwyt_pliku=open("plik.txt", r)
+except:
+    print("Plik nie istnieje")
+else:
+    print(uchwyt_pliku.read())
+finally:
+    print("Dp zobaczenia")
+"""
+żródło algorytmów 
+http://www.rosettacode.org
+"""
+#web scraping wyciąganie danych ze strony internetowej
+from contextlib import closing
+from requests import get
+from requests.exceptions import RequestException
+from bs4 import BeautifulSoup
+def czy_poprawna_odp(odpowiedz):
+    zawartosc=odpowiedz.headers["Content-Tyoe"], lower()
+    return (
+            odpowiedz.sttus_code==200 and
+            zawartosc is not None and
+            zawartosc("html")>-1)
+def otworz_url(url):
+    try:
+        with closing(get(url,stream=True)) as odpowiedz:
+            if czy_poprawna_odp(odpowiedz):
+                return odpowiedz.content
+            else:
+                return None
+    except RequestException as err:
+        print(err)
+        print("Prawdopodobnie niedpowiedni link")
+strumien=otworz_url("https://www.nbp.pl/home.aspx?f=/kursy/kursyc.html")
+html=BeautifulSoup(strumien,"html.parser")
+for i, li in enumerate(html.select("td")):
+    if i>=111 and i<= 120:
+        print(li.text)
+#zawartosc=odpowiedz.headers
+        print(odpowiedz)
