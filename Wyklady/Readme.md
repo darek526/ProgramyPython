@@ -1,4 +1,5 @@
 # instalacja nump
+  https://askubuntu.com/questions/509623/installation-procedure-for-numpy-and-other-python-3-4-packages-on-ubuntu-14-04
   https://linuxconfig.org/install-numpy-on-ubuntu-18-04-bionic-beaver-linux
 # instalacja utils
   https://www.youtube.com/watch?v=0h1xv1_HheQ
