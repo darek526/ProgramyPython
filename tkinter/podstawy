@@ -1,0 +1,120 @@
+# !/usr/bin/python3
+# -*- coding: utf-8 -*-
+from tkinter import  *
+# impoert wszystkich modułów z klasy tkinter
+#sudo apt-get install python-tk
+
+okno =Tk()#stworzenie pustego okna o nazwie okno podobne jak w przeglądarce
+etykieta = Label(okno,text = "Witamy", fg="red")
+#tworzymy etykiete (tekst)i definjujemy że będzie ona znajdować się
+# w wcześniej zdefiniowanym oknie na etykiecie będzie napis Witamy
+# fg można pominąć domyślnie czarny kolor czcionki
+etykieta.pack()
+#aktywacja stworzonej etykiety użycie ()ustawienia standartowe napis na górze po środku TOP
+# można uzyć (side= LEFT;RIGHT; BOTOOM) po lewej prawej lub na dole okna
+okno.mainloop()# uruchomienie naszego okna
+#okno o nazwie tk jak z przegladarki na środku w pierwszej lini czerwony  napis Witamy
+
+"""
+# !/usr/bin/python3
+# -*- coding: utf-8 -*-
+from tkinter import *
+okno=Tk()
+okno.mainloop()
+
+#najprostsze puste okno
+"""
+"""
+http://www.obliczeniowo.com.pl/496
+https://docplayer.pl/51124220-Rozdzial-2-wstep-do-tkinter.html
+rozmieszczanie widżetów geometry manager:
+    place()ręcznie podajemy lokalizacje w pikselach
+       
+import tkinter as tk
+o = tk.Tk()
+g1 = tk.Button(o, text="Przycisk #1")
+g2 = tk.Button(o, text="Przycisk #2")
+g3 = tk.Button(o, text="Przycisk #3")
+g1.place(x=10, y=10)
+g2.place(x=20, y=40)
+g3.place(x=30, y=40)
+o.mainloop
+
+import tkinter as tk
+o = tk.Tk()
+tk.Button(o,text="P #1").place(x=10,y=10,width=150)
+tk.Button(o,text="P #2").place(x=20,y=40,height=15)
+tk.Button(o,text="P #3").place(x=30,y=70)
+o.mainloop()
+    pack() automatycznie widżet za widżetem
+pack( opcje_pakowania )
+side – określenie kierunku, w którym odbywa się pakowanie widżetu:
+TOP (domyślnie)  ku górze okna macierzystego
+BOTTOM  ku dołowi
+LEFT  ku lewej 
+RIGHT  ku prawej
+pack( opcje_pakowania )
+fill – określenie kierunku, w którym widżet będzie rozciągany ponad rozmiar domyślny:
+NONE (domyślnie)  nie rozciągaj
+X rozciągaj w poziomie
+Y  rozciągaj w pionie•
+BOTH  rozciągaj w pionie i poziomie
+    grid() półautomatycznie-rozmieszcznie widżetóœ w siatce z samoczynnym wyrównaniem
+grid( opcje_siatki )
+column, row – określenie położenia widżetu
+column
+    kolumna(blok) siatki (domyślnie 0, czyli skrajna lewa)
+row
+    rząd(wiersz, linia) siatki (domyślnie najwyższy wolny)
+    grid( opcje_siatki )
+•
+columnspan, rowspan
+ – określenie rozciągania widżetu
+columnspan 
+    liczba kolumn zajętych przez widget (domyślnie 1, jeśli więcej, 
+    to widżet jest rozciągany w poziomie)
+rowspan
+    liczba rzędów zajętych przez widżet (jak wyżej, ale w pionie)
+grid( opcje_siatki )
+sticky
+    określenie przylegania widżetu, czyli recepta na to, co zrobić 
+    z widżetem, jeśli jest mniejszy, niż komórka siatki
+domyślnie widżet jest centrowany
+może być równy N,E,S,W,NE,NW,SE,SW (tzw. współrzędne kompasowe)
+import tkinter as tk
+o = tk.Tk()
+g1 = tk.Button(o, text="Przycisk #1")
+g2 = tk.Button(o, text="Przycisk #2")
+g3 = tk.Button(o, text="Przycisk #3")
+g1.grid(row=0,column=0)
+g2.grid(row=1,column=1)
+g3.grid(row=2,column=2)
+o.mainloop()
+import tkinter as tk
+o = tk.Tk()
+g1 = tk.Button(o, text="Przycisk #1")
+g2 = tk.Button(o, text="Przycisk #2")
+g3 = tk.Button(o, text="Przycisk #3")
+g1.grid(row=0,column=0)
+g2.grid(row=1,column=1)
+g3.grid(row=2,column=0,columnspan=2)#
+o.mainloop()
+Programowanie wizualne
+Programowanie wizualne
+Kolory:
+zawsze wtedy, gdy pewien parametr/właściwość określa 
+kolor widżetu lub jego elementu, można użyć napisu o postaci:
+"#RRGGBB", gdzie RR,GG,BB są wartościami szesnastkowymi (00..FF    
+0..255) określającymi nasycenie koloru: R  czerwonego, G  zielonego, B   
+niebieskiego (jest to tzw. addytywne mieszanie barw w modelu RGB)
+"#000000"  czerń
+"#FFFFFF"  biel
+"#00FF00"  czysta zieleń
+"#00FFFF"  turkus (?)
+angielskiej nazwy koloru podstawowego ("white", "black", "red", "green", 
+"blue", "cyan", "yellow", "magenta") 
+jednej z ponad 750 predefiniowanych nazw kolorów rozpoznawanych przez 
+TkInter, których pełna lista dostępna jest pod adresem: 
+http://www.tcl.tk/man/tcl8.4/TkCmd/colors.htm
+
+"""
