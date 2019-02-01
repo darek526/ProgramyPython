@@ -1,0 +1,57 @@
+https://www.youtube.com/watch?v=LmHlF6_f23s&list=PLbOPmSDkHx2pCboufcEKkinpUuramshmr
+#klasy
+class czlowiek:
+    imie=""
+    nazwisko=""
+    def przedstawsie(self):
+        print("Witam nazywam się", self.imie,self.nazwisko)
+    def zmienimie(self):
+        self.imie=input("Podaj imie: ")
+
+znajomy=czlowiek()
+znajomy2=czlowiek()
+
+znajomy.imie="Karol"
+znajomy.nazwisko="Nowak"
+znajomy.przedstawsie()
+
+znajomy2.imie="Janek"
+znajomy2.nazwisko="Kowalski"
+znajomy2.zmienimie()
+znajomy2.przedstawsie()
+"""
+Witam nazywam się Karol Nowak
+Podaj imie: Marcin
+Witam nazywam się Marcin Kowalski
+"""
+#construktor __init__
+class czlowiek:
+    def __init__(self,x):
+        self.imie=x
+    def przedstawsie(self):
+        print("Witam nazywam się", self.imie)
+
+znajomy3=czlowiek("Andrzej")
+znajomy3.przedstawsie()
+
+znajomy4=czlowiek("Mariusz")
+znajomy4.przedstawsie()
+"""
+Witam nazywam się Andrzej
+Witam nazywam się Mariusz
+"""
+#Dziedziczenie klas
+
+class rodzice():
+    def nazwisko(self):
+        print("Wiśniewski")
+    def imie(self):
+        print("Jan")
+class dziecko(rodzice):
+#w nawiasie wpisujemy z jakiej klasy będziemy dziedziczyć możemy wpisać kilka klas
+    def imie(self):
+        print("Michal")
+
+obiekt = dziecko()
+obiekt.nazwisko()
+#Wiśniewski
