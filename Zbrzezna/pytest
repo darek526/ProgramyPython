@@ -1,5 +1,37 @@
 PYTEST
 Piszą programy w języku Python wcześniej czy póżniej będziemy musieli przetestować nasz program.
 Błedy w programowanie zdarzają się najlepszym. Pisząc program nie jesteśmi w stanie przewidzieć wszystkich 
-ewentualnych błędów. Jedną z form testowania jest pytest
- Instalacja
+ewentualnych błędów. Jedną z form testowania jest pytest. jest to prosty i funkcjonalny Framework(platforma 
+programistyczna). Definiuje on ogólną strukturę aplikacji oraz mechanizm jej działania, a także dostarcza 
+zestaw komponentów i bibliotek ogólnego przeznaczenia, służy do uruchamiania testów automatycznych jak i do testów jednostkowch
+Kilka cech charakteryzujących pytesta:
+proste testy 
+
+Należy pamietać o kilku ważnych zasadach testowania oprogramowania: 
+samo testowanie jest ryzykowane
+nigdy nie mamy 100% pewności że przetestowaliśmy wszystko 
+nawet poprawnie wykonany test nie gwarantuje nam brak innych błędów
+im więcej błędów udało nam się znaleźć tym więcej pozostało do znalezienia
+nie wszystki znaleziony błędy zostały naprawione, czasami dochodzi do sytuacji
+że nie możemy roższtrzygnąć czy błąd jest błędem.
+Rozrużniamy następujące poziomy testowani:
+Testy jednostkowe, integracyjne, funkcjonalne,systemowe, akceptacyjne, testy w fazie utrzymania sytemu
+
+
+ Instalacja:
+ Przed przystapieniem do instalcji musimy się upewnić czy mamy  zainstalowa
+   sudo apt install python3-pytest
+   
+   najprosztszy test to test porównujący liczby, używamy polecenia assert:
+   def test_passing():
+      assert (4,5,6)==(4,5,6)
+      
+ test uruchamiamy poleceniem
+   pytest-3 
+   informacja zwrotna:
+   test_one.py
+   w tym wypadku porównanie zakończyłosię powodzeniem 
+   porównywane bloki liczb były takie same(4,5,6)
+   informuje nas o tym . po nazwie programu.
+   używając opcji -v lub -verbose możemy uzyskać więcej informacji
+   
