@@ -1,0 +1,5 @@
+PYTEST
+Piszą programy w języku Python wcześniej czy póżniej będziemy musieli przetestować nasz program.
+Błedy w programowanie zdarzają się najlepszym. Pisząc program nie jesteśmi w stanie przewidzieć wszystkich 
+ewentualnych błędów. Jedną z form testowania jest pytest
+ Instalacja
