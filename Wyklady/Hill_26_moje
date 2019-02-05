@@ -18,6 +18,11 @@ def zamiana_liter_na_cyfry():
     for i in range(len(napis)):
         text_cyfry.append(ord(napis[i]) - 65)
     return text_cyfry
+  """
+Tryby szyfrowania:
+metoda ECB podział listy na bloki
+metoda BCC lepsz
+"""
 def podziel_liste(calosc, dlugosc):
     kawalki = []
     for start in range(0, len(calosc), dlugosc):
