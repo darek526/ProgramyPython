@@ -1,0 +1,8 @@
+wynik= [[1, 2, 3, 4], [5, 6], [7, 8, 9]]
+lista2=[]
+
+for i in wynik:
+   for j in i:
+      lista2.append(j)
+print(lista2)
+#[1, 2, 3, 4, 5, 6, 7, 8, 9]
