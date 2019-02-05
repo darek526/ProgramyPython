@@ -1,0 +1,40 @@
+"""
+#mnozenie macierzy: suma mnożenia wierszy przez kolumny
+macierz_a=[[6,13,20],[24,16,17],[1,10,15]]
+macierz_b=[0,2,19]
+#macierz_c=[]
+n=len(macierz_x)
+for i in range(len(macierz_a)):
+    for j in range(len(macierz_b[0])):
+        macierz_c[i][j]=0
+        for k in range(n):
+            macierz_c[i][j]+= macierz_a[i][k] * macierz_b[k][i]#ostani nawias[j]
+print(macierz_c)
+"""
+# 3x3 matrix
+X = [[6,24,1],[13,16,10],[20,17,15]]
+# 3x4 matrix
+Y = [[0],[2],[19]]
+# result is 3x4
+wynik =[]
+"""
+# iterate through rows of X
+for i in range(len(X)):
+   # iterate through columns of Y
+   for j in range(len(Y[0])):
+       # iterate through rows of Y
+       for k in range(len(Y)):
+           result[i][j] += X[i][k] * Y[k][j]
+
+for r in result:
+   print(r)
+"""
+wynik = [[(sum((a * b) % 26 for a, b in zip(X_row, Y_col))) % 26 for Y_col in zip(*Y)] for X_row in X]
+
+for r in wynik:
+   print(r)
+"""
+[15]
+[14]
+[7]"""
+#print(wynik) #wyświetla macierz w 1 lini [[15], [14], [7]]
