@@ -49,7 +49,7 @@ class Game(object):
             if possible_to_elive == 2 or possible_to_elive == 3:
                 elived.add(life)
         return elived
-    def tickt(self):
+    def tick(self):
         self.lives = self.get_energed().union(self.get_alived())
 
 """
