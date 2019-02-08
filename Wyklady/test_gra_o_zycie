@@ -1,0 +1,17 @@
+from gra_zycie import Game, Life
+
+
+
+def test_add_life_exist():#sprawdz czy życie istnieje
+    game = Game()
+    life=Life(3,5)
+    life.show()
+    game.add_life(life)
+    assert len(game.lives) ==0
+def test_tick():
+    game=Game()
+    game.add_lives(Life(0,0))
+    game.add_lives(Life(1,0))
+    game.add_lives(Life(2,1))
+    game.tick()
+    assert len(game.lives) == 2
