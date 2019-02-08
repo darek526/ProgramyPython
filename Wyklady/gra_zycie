@@ -1,0 +1,61 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+"""
+Gra w życie
+Reguły gry według Conwaya
+Martwa komórka, która ma dokładnie 3 żywych sąsiadów, staje się żywa w następnej jednostce czasu (rodzi się)
+Żywa komórka z 2 albo 3 żywymi sąsiadami pozostaje nadal żywa;
+przy innej liczbie sąsiadów umiera (z „samotności” albo „zatłoczenia”)
+(wikipedia)
+"""
+class Life(object):
+    def __init__(self,x,y):#tworzymy nowe życie
+        self.x=x
+        self.y=y
+    def get_neighbours(self):#sąsiad
+        neighbours = set()#sąsiedzi to zbiór
+        neighbours.add(Life(self.x+1,self.y))
+        neighbours.add(Life(self.x+1,self.y-1))
+        neighbours.add(Life(self.x, self.y-1))
+        neighbours.add(Life(self.x-1, self.y-1))
+        neighbours.add(Life(self.x-1, self.y))
+        neighbours.add(Life(self.x-1, self.y+1))
+        neighbours.add(Life(self.x, self.y+1))
+        neighbours.add(Life(self.x+1, self.y+1))
+        return neighbours
+    def show(self):#wyswietla położenie x y
+        print("x={} \t y={}".format(self.x,self.y))
+class Game(object):
+    def __init__(self):
+        self.lives = set()
+    def add_lives(self,lives):
+        self.lives.add(lives)#dodajemy zycie do zbioru żyć
+    def get_energed(self):#zbiór komórek które ozyją w następnym rucu
+        possible_to_energe=set()
+        energed=set()
+        for life in self.lives:
+            possible_to_energe.union(life.get_neighbours())#sumowanie sąsiadów
+        possible_to_energe=possible_to_energe.difference(self.lives)# odejmowanie żywych
+        for e in possible_to_energe:
+            if self.should_energed(e):
+                energed.add(e)
+        return possible_to_energe
+    def should_energed(self,life):#zwrot sąsiadów sąsiadujących z 3 żywymi
+        return len(self.lives.intersection(life.get_neighbours()))==3
+    def get_alived(self):
+        elived =set()#komórki które ożyły
+        for life in self.lives:
+            possible_to_elive=len(self.lives.intersection(life.get_neighbours()))
+            if possible_to_elive == 2 or possible_to_elive == 3:
+                elived.add(life)
+        return elived
+    def tickt(self):
+        self.lives = self.get_energed().union(self.get_alived())
+
+"""
+life=Life(10,15)
+life.get_neighbours()
+life.show()
+for l in life.get_neighbours():#współrzędne sąsiadów
+    l.show()
+"""
