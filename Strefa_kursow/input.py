@@ -53,4 +53,5 @@ print('Stolicą kraju {2} jest {0}. Populacja kraju: {1} mieszkańców.'.format(
 # wywołanie zmiennej za pomocą indeksu (odwrócona kolejność)
 print('Stolicą kraju {kr} jest {st}. Populacja kraju: {pop} mieszkańców.'.format(kr=kraj, st=stolica, pop=populacja))   
 # wywołanie do zmiennej przez nazwę
+#http://www.oprojektowaniu.pl/python-dla-inzynierow-napisy/
 """
