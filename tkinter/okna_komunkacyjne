@@ -1,5 +1,7 @@
 """
-okna informacyjne ostrzegawcze błąd
+okna komunikacyjne:
+informacyjne ostrzegawcze błąd
+http://infohost.nmt.edu/tcc/help/pubs/tkinter/web/tkMessageBox.html
 """
 from tkinter import *
 from tkinter import messagebox as msb
