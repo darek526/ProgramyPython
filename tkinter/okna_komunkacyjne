@@ -1,0 +1,19 @@
+"""
+okna informacyjne ostrzegawcze błąd
+"""
+from tkinter import *
+from tkinter import messagebox as msb
+
+# hide main window
+okno=Tk()
+okno.title("Tresc")#napis na ramce
+
+# message box display
+a=-6
+if a ==0:
+    msb.showerror("Error", "Error message")# "treść","treść komunikatu"
+elif a<0:
+    msb.showwarning("Warning", "Warning message")
+else:
+    msb.showinfo("Information", "Informative message")
+okno.mainloop()
