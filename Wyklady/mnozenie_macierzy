@@ -2,13 +2,13 @@
 #mnozenie macierzy: suma mnożenia wierszy przez kolumny
 macierz_a=[[6,13,20],[24,16,17],[1,10,15]]
 macierz_b=[0,2,19]
-#macierz_c=[]
+#macierz_c=[[0],[0],[0]]
 n=len(macierz_x)
 for i in range(len(macierz_a)):
     for j in range(len(macierz_b[0])):
         macierz_c[i][j]=0
         for k in range(n):
-            macierz_c[i][j]+= macierz_a[i][k] * macierz_b[k][i]#ostani nawias[j]
+            macierz_c[i][j]+= macierz_a[i][k] * macierz_b[k][j]#ostani nawias[j]
 print(macierz_c)
 """
 #https://www.programiz.com/python-programming/examples/multiply-matrix
