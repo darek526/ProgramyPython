@@ -1,0 +1,57 @@
+import pandas as pd
+from dateutil import parser
+import matplotlib.pyplot as plt
+import numpy as np
+from fbprophet import Prophet
+
+
+df = pd.read_csv('~/Pulpit/cwiczenia/prophet/examples/example_yosemite_temps.csv')
+"""
+#print(df["y"])
+# wyswietla tylko kolumne y
+#df["date"]=df["ds"].apply(lambda x: parser.parse(x).date())
+#dodajemy pozycje date lambda każdy element sparsuj i weż z niego date
+print(df)
+#policzenie śrdniej temperatury
+#agrr = df.groupby(["date"])["y"].agg("mean")#mean srednia temperatur, sum to suma
+
+df["date"]=df["ds"].apply(lambda x: parser.parse(x).month)#weekday() dni tygodnia
+agrr = df.groupby(["date"])["y"].agg("max")#
+print(agrr)
+fig = agrr.plot(color="blue")
+plt.show()
+#średnia z miesiąca
+"""
+"""
+#segregujemy w zależności od wybranej wartości
+df["datetime"] = pd.to_datetime(df["ds"], format="%Y-%m-%d %H:%M:%S")
+df["day"]=df["datetime"].apply(lambda  x: x.day)
+df["month"]=df["datetime"].apply(lambda  x: x.month)
+df["weekday"]=df["datetime"].apply(lambda  x: x.weekday())
+df["hour"]=df["datetime"].apply(lambda  x: x.hour)
+#tworzymy nową ramkę
+agrr = df.groupby(["weekday","hour"])["y"].agg("mean").reset_index()
+
+print(agrr)
+
+plt.imshow(np.array(pd.pivot_table(df,
+                                   values="y",
+                                   index="month",
+                                   columns="hour").fillna(0)),
+           cmap="coolwarm",
+           label="Count",
+           interpolation="spline36",
+           aspect="auto")
+plt.show()#foto 17.02
+"""
+#https://facebook.github.io/prophet/docs/quick_start.html
+
+m = Prophet()
+m.fit(df)
+
+future = m.make_future_dataframe(periods=10)#prognozowanie 10 okresów
+forecast = m.predict(future)
+
+#fig1 = m.plot(forecast)
+fig2 = m.plot_components(forecast)
+plt.show()
