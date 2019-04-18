@@ -1,0 +1,45 @@
+"""
+zbiory
+A = {a,b,g,d}
+B = {a,b,q,w,e,r,p}
+operacje na zbiorach:
+dodawanie A|B = {a,b,g,d,q,w,e,r,p}
+iloczyn(część wspólna) A & B = {a,b}
+odejmowanie, różnicz symetryczna(suma zbiorów ale bez części wspólnej) A^B = {g,d,q,w,r,p}
+"""
+A = {"a","b","c"}
+B = {"a","b"}
+print(A|B)
+print(A^B)
+print(A&B)
+"""
+{'b', 'a', 'c'}
+{'c'}
+{'b', 'a'}
+"""
+"""
+tworzenie zbioru
+nazwa_zbioru = set(tu wpisujemy liste[] krotkę() lub słownik{})
+A=set([a,b,c,d,a,b,q])
+polecenie print(A) wyświetli tylko znkaki które się nie powtarrzają:
+{a,b,c,d,q}
+"""
+#{'a', 'b', 'c'}
+Z=set(["a","c","b",1,2,4,"a","b"])
+print(Z)
+#{1, 2, 4, 'b', 'c', 'a'}
+C=set(("a","c","b",1,2,4,"a","b"))
+print(C)
+#{1, 2, 4, 'a', 'b', 'c'}
+D=set("Abrakadabra")
+print(D)
+{'A', 'a', 'b', 'k', 'r', 'd'}
+E=set({1:"ala",2:"Ola"})
+print(E)
+F=set("Ala ma kota".split())
+print(F)
+# kolejność poszczególnych elementów zbioru  jets różna
+#{'ma', 'kota', 'Ala'} split rozbija wyrażenie tam gdzie są spacje
+# {1, 2} wyśietli tylko klucze ze słownika
+"""zbiór składany
+"""
