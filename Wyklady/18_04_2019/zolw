@@ -1,0 +1,9 @@
+import turtle
+bob=turtle.Turtle()
+długosc=int(input("wprowadz długosc boku: "))
+n=int(input("Podaj ilość wierzchołków n" ))
+def polygon(t,n,lenght):
+    for i in range(n):
+        t.fd(length)
+        t.lt(360/n)
+polygon(bob,n,dlugosc)
