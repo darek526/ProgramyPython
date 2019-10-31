@@ -3,8 +3,8 @@ import random
 import nwd
 #Algorytm rozwiązania liniowego układu kongruencji
 
-#Steina
-def steina():
+# Steina
+def stein():
     
 def element_odwrotny(a,n):
     import nwd
