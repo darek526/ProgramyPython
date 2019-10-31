@@ -1,11 +1,14 @@
 import matplotlib.pyplot as plt
+import numpy as np
 def main():
     #tworzenie listy pkt na wykresie dowolne nazwy list
-    x_coordinates=[0,1,2,3,4,5,6,7,8,9,10]
-    y_coordinates=[0,-3,2,3,2,3,2,3,4,3,5]
+    x_1=np.linspace(-10.5,10.5)
+    y_1=np.sin(x_1)#funkcj sinus
+    y_2=np.cos(x_1)#funkcja cos dla tych samych x
 
     #tworzenie wykresu dodajemy parametry color , grubość, rodzaj(- ciągła --przerywana :kropki) lini
-    plt.plot(x_coordinates,y_coordinates, color="r", linewidth=2, linestyle=":")
+    plt.plot(x_1,y_2)
+    plt.plot(x_1,y_1)
 
     #dodawanie opisu rysunku
     plt.title("Wykres naszej funkcji")
