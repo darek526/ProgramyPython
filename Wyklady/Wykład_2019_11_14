@@ -1,0 +1,12 @@
+import pickle
+#można użyć "pickle" do zapisywania długich list
+l=[1,None,"Stefan",3.1415]
+print(l)
+#zapis pliku za pomocą biblioteki pickle
+with open("plik.binarny","wb")as plik1:
+    pickle.dump(l,plik1)
+
+#załadowanie pliku za pomocą biblioteki pickle
+with open("plik.binarny","rb")as plik2:
+    a=pickle.load(plik2)
+print(a)
