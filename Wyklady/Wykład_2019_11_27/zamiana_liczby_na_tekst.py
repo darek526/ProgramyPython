@@ -8,5 +8,6 @@ def zamiana_na_tekst(number_1):
         a=a+list_1[i]#zamiana listy na string(tekst)
     return a
 #koniec funkcji
-print(zamiana_na_tekst(36350526597430319627825934964))
-#problem przy ść
+print(zamiana_na_tekst(245416267745379773948736278894488019213821475356591056971552980189603703169403875184))
+# liczba wpisan w print to wynik działania programu zamieniającego tekst na liczbe
+# problem przy ś ć ń ą
