@@ -1,1 +1,29 @@
+#zamian liczby na litery
+def number_to_text(number_1):
+    list_1=[]
+    a=""
+    while number_1 !=0:
+        list_1.append(chr(number_1%256))
+        number_1=number_1//256
 
+    for i in range(len(list_1)):
+        a=a+list_1[i]
+    return a
+print(number_to_text())
+
+
+#zamiana tekst na liczbe ASCII
+def zamiana_tekst_ang(text_1):
+    number_1=0
+    for i in range(len(text_1)):
+        number_1=number_1+ord(text_1[i])*(256**i)
+    return number_1
+print(zamiana_tekst_ang("napis"))
+
+#zamiana tekst na liczbe ASCII
+def zamiana_tekst_pol(text_1):
+    number_1=0
+    for i in range(len(text_1)):
+        number_1=number_1+ord(text_1[i])*(3811**i)
+    return number_1
+print(zamiana_tekst_pol("ćma"))
